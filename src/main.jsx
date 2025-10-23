@@ -3,12 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
-import { ThemeContext } from './Them.jsx'
+import Them from './Them.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <ThemeContext value={'yellow'}>
+  <Them>
   <BrowserRouter>
     <App />
   </BrowserRouter>
-  </ThemeContext>
+  
+  </Them>
 )

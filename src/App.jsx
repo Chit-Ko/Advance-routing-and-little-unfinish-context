@@ -15,10 +15,10 @@ import { ThemeContext } from './Them.jsx'
 //
 
 const App = () => {
-  const [theme,setTheme]= useContext(ThemeContext);
+  const [theme]= useContext(ThemeContext);
 
   return (
-    < div id='scroll-bar' className='w-full h-screen bg-gray-500 padding-4 text-white overflow-y-scroll hide-scrollbar'>
+    < div id='scroll-bar' className={`w-full h-screen  padding-4  overflow-y-scroll hide-scrollbar ${theme === 'light' ? 'bg-gray-500 text-gray-900' : 'bg-gray-800 text-white' } `} >
       <NavBar />
       <Routes>
        <Route path='/' element={<Home />} />
